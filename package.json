@@ -1,0 +1,29 @@
+{
+  "name": "travel-price-map",
+  "description": "",
+  "version": "0.0.0",
+  "keywords": [],
+  "author": "Julius Tens <mail@juliustens.de>",
+  "homepage": "https://github.com/juliuste/travel-price-map",
+  "repository": "juliuste/travel-price-map",
+  "bugs": "https://github.com/juliuste/travel-price-map/issues",
+  "dependencies": {
+    "config": "^1.26.1",
+    "isomorphic-fetch": "^2.2.1",
+    "lodash.findkey": "^4.6.0",
+    "lodash.min": "^4.0.1",
+    "lodash.pick": "^4.4.0",
+    "lodash.toarray": "^4.4.0",
+    "moment-timezone": "^0.5.13"
+  },
+  "devDependencies": {
+    "browserify": "^14.1.0"
+  },
+  "scripts": {
+    "build": "browserify index.js > bundle.js"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "license": "MIT"
+}

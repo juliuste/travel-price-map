@@ -1,0 +1,871 @@
+[
+    {
+        "ids": {
+            "db": 8196001,
+            "mfb": 1394
+        },
+        "name": "Wien",
+        "coordinates": {
+            "longitude": 16.341553,
+            "latitude": 48.207037
+        }
+    },
+    {
+        "ids": {
+            "db": 8100002,
+            "mfb": 1554
+        },
+        "name": "Salzburg",
+        "coordinates": {
+            "longitude": 13.04582,
+            "latitude": 47.813048
+        }
+    },
+    {
+        "ids": {
+            "db": 8800007,
+            "mfb": 2468
+        },
+        "name": "Antwerpen",
+        "coordinates": {
+            "longitude": 4.421165,
+            "latitude": 51.215807
+        }
+    },
+    {
+        "ids": {
+            "db": 8800003,
+            "mfb": 1785
+        },
+        "name": "Brussels",
+        "coordinates": {
+            "longitude": 4.335695,
+            "latitude": 50.835375
+        }
+    },
+    {
+        "ids": {
+            "db": 5200004,
+            "mfb": null
+        },
+        "name": "Sofia",
+        "coordinates": {
+            "longitude": 23.31827,
+            "latitude": 42.713908
+        }
+    },
+    {
+        "ids": {
+            "db": 8696001,
+            "mfb": 1905
+        },
+        "name": "Copenhagen",
+        "coordinates": {
+            "longitude": 12.578426,
+            "latitude": 55.688237
+        }
+    },
+    {
+        "ids": {
+            "db": 8600087,
+            "mfb": 5338
+        },
+        "name": "Aarhus",
+        "coordinates": {
+            "longitude": 10.204995,
+            "latitude": 56.150076
+        }
+    },
+    {
+        "ids": {
+            "db": 7300001,
+            "mfb": null,
+        },
+        "name": "Athens",
+        "coordinates": {
+            "longitude": 23.704689,
+            "latitude": 37.997853
+        }
+    },
+    {
+        "ids": {
+            "db": 7300008,
+            "mfb": null
+        },
+        "name": "Thessaloniki",
+        "coordinates": {
+            "longitude": 22.929891,
+            "latitude": 40.6446
+        }
+    },
+    {
+        "ids": {
+            "db": 7100064,
+            "mfb": 5178
+        },
+        "name": "Barcelona",
+        "coordinates": {
+            "longitude": 2.140368,
+            "latitude": 41.378911
+        }
+    },
+    {
+        "ids": {
+            "db": 7100011,
+            "mfb": 5188
+        },
+        "name": "Bilbao",
+        "coordinates": {
+            "longitude": -2.927507,
+            "latitude": 43.259715
+        }
+    },
+    {
+        "ids": {
+            "db": 7100049,
+            "mfb": null
+        },
+        "name": "Madrid",
+        "coordinates": {
+            "longitude": -3.689756,
+            "latitude": 40.405964
+        }
+    },
+    {
+        "ids": {
+            "db": 7100180,
+            "mfb": null
+        },
+        "name": "Sevilla",
+        "coordinates": {
+            "longitude": -5.975264,
+            "latitude": 37.391926
+        }
+    },
+    {
+        "ids": {
+            "db": 7100054,
+            "mfb": null,
+        },
+        "name": "Valencia",
+        "coordinates": {
+            "longitude": -0.381762,
+            "latitude": 39.458015
+        }
+    },
+    {
+        "ids": {
+            "db": 8796005,
+            "mfb": 4018
+        },
+        "name": "Avignon",
+        "coordinates": {
+            "longitude": 4.80033,
+            "latitude": 43.93957
+        }
+    },
+    {
+        "ids": {
+            "db": 8700047,
+            "mfb": 3288
+        },
+        "name": "Bordeaux",
+        "coordinates": {
+            "longitude": -0.555919,
+            "latitude": 44.82649
+        }
+    },
+    {
+        "ids": {
+            "db": 8700434,
+            "mfb": 4118,
+        },
+        "name": "Brest",
+        "coordinates": {
+            "longitude": -4.479818,
+            "latitude": 48.387801
+        }
+    },
+    {
+        "ids": {
+            "db": 8796002,
+            "mfb": 3498
+        },
+        "name": "Lyon",
+        "coordinates": {
+            "longitude": 4.863811,
+            "latitude": 45.702255
+        }
+    },
+    {
+        "ids": {
+            "db": 8700074,
+            "mfb": 3508
+        },
+        "name": "Marseille",
+        "coordinates": {
+            "longitude": 5.38195,
+            "latitude": 43.303816
+        }
+    },
+    {
+        "ids": {
+            "db": 8796001,
+            "mfb": 3508
+        },
+        "name": "Paris",
+        "coordinates": {
+            "longitude": 2.333681,
+            "latitude": 48.861496
+        }
+    },
+    {
+        "ids": {
+            "db": 8700023,
+            "mfb": 106
+        },
+        "name": "Strasbourg",
+        "coordinates": {
+            "longitude": 7.734067,
+            "latitude": 48.585339
+        }
+    },
+    {
+        "ids": {
+            "db": 8396005,
+            "mfb": 1194
+        },
+        "name": "Milano",
+        "coordinates": {
+            "longitude": 9.207597,
+            "latitude": 45.462477
+        }
+    },
+    {
+        "ids": {
+            "db": 8396003,
+            "mfb": 5408
+        },
+        "name": "Napoli",
+        "coordinates": {
+            "longitude": 14.257611,
+            "latitude": 40.860791
+        }
+    },
+    {
+        "ids": {
+            "db": 8396004,
+            "mfb": 2075
+        },
+        "name": "Rome",
+        "coordinates": {
+            "longitude": 12.470654,
+            "latitude": 41.901868
+        }
+    },
+    {
+        "ids": {
+            "db": 8396008,
+            "mfb": 2155
+        },
+        "name": "Venedig",
+        "coordinates": {
+            "longitude": 12.315491,
+            "latitude": 45.444427
+        }
+    },
+    {
+        "ids": {
+            "db": 8396001,
+            "mfb": 1845
+        },
+        "name": "Florenz",
+        "coordinates": {
+            "longitude": 11.249928,
+            "latitude": 43.765835
+        }
+    },
+    {
+        "ids": {
+            "db": 7896001,
+            "mfb": 2205
+        },
+        "name": "Zagreb",
+        "coordinates": {
+            "longitude": 15.990291,
+            "latitude": 45.807411
+        }
+    },
+    {
+        "ids": {
+            "db": 5496001,
+            "mfb": 1374
+        },
+        "name": "Prague",
+        "coordinates": {
+            "longitude": 14.451481,
+            "latitude": 50.081926
+        }
+    },
+    {
+        "ids": {
+            "db": 5400001,
+            "mfb": 9638
+        },
+        "name": "Brno",
+        "coordinates": {
+            "longitude": 16.612776,
+            "latitude": 49.190537
+        }
+    },
+    {
+        "ids": {
+            "db": 8096009,
+            "mfb": 118
+        },
+        "name": "Hamburg",
+        "coordinates": {
+            "longitude": 9.997434,
+            "latitude": 53.55711
+        }
+    },
+    {
+        "ids": {
+            "db": 8096021,
+            "mfb": 96
+        },
+        "name": "Frankfurt",
+        "coordinates": {
+            "longitude": 8.663785,
+            "latitude": 50.107149
+        }
+    },
+    {
+        "ids": {
+            "db": 8096022,
+            "mfb": 107
+        },
+        "name": "Cologne",
+        "coordinates": {
+            "longitude": 6.967206,
+            "latitude": 50.941312
+        }
+    },
+    {
+        "ids": {
+            "db": 8000261,
+            "mfb": 94
+        },
+        "name": "Munich",
+        "coordinates": {
+            "longitude": 11.558735,
+            "latitude": 48.140364
+        }
+    },
+    {
+        "ids": {
+            "db": 8010205,
+            "mfb": 113
+        },
+        "name": "Leipzig",
+        "coordinates": {
+            "longitude": 12.381248,
+            "latitude": 51.345216
+        }
+    },
+    {
+        "ids": {
+            "db": 2696001,
+            "mfb": null
+        },
+        "name": "Tallinn",
+        "coordinates": {
+            "longitude": 24.737424,
+            "latitude": 59.44046
+        }
+    },
+    {
+        "ids": {
+            "db": 1096001,
+            "mfb": null
+        },
+        "name": "Helsinki",
+        "coordinates": {
+            "longitude": 24.941443,
+            "latitude": 60.171742
+        }
+    },
+    {
+        "ids": {
+            "db": 5596001,
+            "mfb": 1795
+        },
+        "name": "Budapest",
+        "coordinates": {
+            "longitude": 19.054084,
+            "latitude": 47.519551
+        }
+    },
+    {
+        "ids": {
+            "db": 6096001,
+            "mfb": null
+        },
+        "name": "Dublin",
+        "coordinates": {
+            "longitude": -6.298929,
+            "latitude": 53.332578
+        }
+    },
+    {
+        "ids": {
+            "db": 2496001,
+            "mfb": null
+        },
+        "name": "Vilnius",
+        "coordinates": {
+            "longitude": 25.301326,
+            "latitude": 54.67856
+        }
+    },
+    {
+        "ids": {
+            "db": 8200100,
+            "mfb": 172
+        },
+        "name": "Luxembourg",
+        "coordinates": {
+            "longitude": 6.134392,
+            "latitude": 49.599717
+        }
+    },
+    {
+        "ids": {
+            "db": 2596001,
+            "mfb": null
+        },
+        "name": "Riga",
+        "coordinates": {
+            "longitude": 24.664252,
+            "latitude": 56.948291
+        }
+    },
+    {
+        "ids": {
+            "db": 2300010,
+            "mfb": null
+        },
+        "name": "Chisinau",
+        "coordinates": {
+            "longitude": 28.860192,
+            "latitude": 47.012874
+        }
+    },
+    {
+        "ids": {
+            "db": 6231001,
+            "mfb": null
+        },
+        "name": "Podgorica",
+        "coordinates": {
+            "longitude": 19.269654,
+            "latitude": 42.432393
+        }
+    },
+    {
+        "ids": {
+            "db": 6500001,
+            "mfb": null
+        },
+        "name": "Skopje",
+        "coordinates": {
+            "longitude": 21.446015,
+            "latitude": 41.991176
+        }
+    },
+    {
+        "ids": {
+            "db": 7696001,
+            "mfb": 7238
+        },
+        "name": "Oslo",
+        "coordinates": {
+            "longitude": 10.781842,
+            "latitude": 59.909527
+        }
+    },
+    {
+        "ids": {
+            "db": 7600007,
+            "mfb": null
+        },
+        "name": "Bergen",
+        "coordinates": {
+            "longitude": 5.334127,
+            "latitude": 60.390063
+        }
+    },
+    {
+        "ids": {
+            "db": 8400058,
+            "mfb": 1334
+        },
+        "name": "Amsterdam",
+        "coordinates": {
+            "longitude": 4.899427,
+            "latitude": 52.379191
+        }
+    },
+    {
+        "ids": {
+            "db": 8400530,
+            "mfb": 2548
+        },
+        "name": "Rotterdam",
+        "coordinates": {
+            "longitude": 4.468771,
+            "latitude": 51.924804
+        }
+    },
+    {
+        "ids": {
+            "db": 5196007,
+            "mfb": 1815
+        },
+        "name": "Gdansk",
+        "coordinates": {
+            "longitude": 18.64396,
+            "latitude": 54.365843
+        }
+    },
+    {
+        "ids": {
+            "db": 5196004,
+            "mfb": 2125
+        },
+        "name": "Szczecin",
+        "coordinates": {
+            "longitude": 14.583146,
+            "latitude": 53.458795
+        }
+    },
+    {
+        "ids": {
+            "db": 5196003,
+            "mfb": 7568
+        },
+        "name": "Warsaw",
+        "coordinates": {
+            "longitude": 21.001417,
+            "latitude": 52.224729
+        }
+    },
+    {
+        "ids": {
+            "db": 5196001,
+            "mfb": 1915
+        },
+        "name": "Krakow",
+        "coordinates": {
+            "longitude": 19.940546,
+            "latitude": 50.069934
+        }
+    },
+    {
+        "ids": {
+            "db": 5100069,
+            "mfb": 1765
+        },
+        "name": "Wroclaw",
+        "coordinates": {
+            "longitude": 17.037084,
+            "latitude": 51.098075
+        }
+    },
+    {
+        "ids": {
+            "db": 5196002,
+            "mfb": 2035
+        },
+        "name": "Poznan",
+        "coordinates": {
+            "longitude": 16.905366,
+            "latitude": 52.410249
+        }
+    },
+    {
+        "ids": {
+            "db": 9400009,
+            "mfb": null
+        },
+        "name": "Lissabon",
+        "coordinates": {
+            "longitude": -9.12227,
+            "latitude": 38.71387
+        }
+    },
+    {
+        "ids": {
+            "db": 9400008,
+            "mfb": null
+        },
+        "name": "Porto",
+        "coordinates": {
+            "longitude": -8.584931,
+            "latitude": 41.148823
+        }
+    },
+    {
+        "ids": {
+            "db": 5396001,
+            "mfb": 6378
+        },
+        "name": "Bucharest",
+        "coordinates": {
+            "longitude": 26.119102,
+            "latitude": 44.440763
+        }
+    },
+    {
+        "ids": {
+            "db": 7200002,
+            "mfb": null
+        },
+        "name": "Belgrade",
+        "coordinates": {
+            "longitude": 20.455466,
+            "latitude": 44.808557
+        }
+    },
+    {
+        "ids": {
+            "db": 2096001,
+            "mfb": null
+        },
+        "name": "Moscow",
+        "coordinates": {
+            "longitude": 37.5879,
+            "latitude": 55.790058
+        }
+    },
+    {
+        "ids": {
+            "db": 2096002,
+            "mfb": null
+        },
+        "name": "St Petersburg",
+        "coordinates": {
+            "longitude": 30.379333,
+            "latitude": 59.946553
+        }
+    },
+    {
+        "ids": {
+            "db": 2096003,
+            "mfb": null
+        },
+        "name": "Kaliningrad",
+        "coordinates": {
+            "longitude": 20.498624,
+            "latitude": 54.693419
+        }
+    },
+    {
+        "ids": {
+            "db": 7496000,
+            "mfb": 3798
+        },
+        "name": "Stockholm",
+        "coordinates": {
+            "longitude": 18.066134,
+            "latitude": 59.330963
+        }
+    },
+    {
+        "ids": {
+            "db": 7400004,
+            "mfb": 1064
+        },
+        "name": "Malmö",
+        "coordinates": {
+            "longitude": 13.00126,
+            "latitude": 55.609231
+        }
+    },
+    {
+        "ids": {
+            "db": 7400003,
+            "mfb": 6638
+        },
+        "name": "Göteborg",
+        "coordinates": {
+            "longitude": 11.973425,
+            "latitude": 57.709309
+        }
+    },
+    {
+        "ids": {
+            "db": 7400102,
+            "mfb": 6768
+        },
+        "name": "Uppsala",
+        "coordinates": {
+            "longitude": 17.646751,
+            "latitude": 59.858099
+        }
+    },
+    {
+        "ids": {
+            "db": 8501008,
+            "mfb": 3298
+        },
+        "name": "Geneva",
+        "coordinates": {
+            "longitude": 6.142428,
+            "latitude": 46.210209
+        }
+    },
+    {
+        "ids": {
+            "db": 8596001,
+            "mfb": 1504
+        },
+        "name": "Basel",
+        "coordinates": {
+            "longitude": 7.588828,
+            "latitude": 47.547831
+        }
+    },
+    {
+        "ids": {
+            "db": 8596008,
+            "mfb": 89
+        },
+        "name": "Zurich",
+        "coordinates": {
+            "longitude": 8.540534,
+            "latitude": 47.378968
+        }
+    },
+    {
+        "ids": {
+            "db": 5696001,
+            "mfb": 1745
+        },
+        "name": "Bratislava",
+        "coordinates": {
+            "longitude": 17.097852,
+            "latitude": 48.154135
+        }
+    },
+    {
+        "ids": {
+            "db": 7900003,
+            "mfb": 1925
+        },
+        "name": "Ljubljana",
+        "coordinates": {
+            "longitude": 14.51294,
+            "latitude": 46.058687
+        }
+    },
+    {
+        "ids": {
+            "db": 7596001,
+            "mfb": null
+        },
+        "name": "Istanbul",
+        "coordinates": {
+            "longitude": 28.97724,
+            "latitude": 41.005418
+        }
+    },
+    {
+        "ids": {
+            "db": 7500010,
+            "mfb": null
+        },
+        "name": "Ankara",
+        "coordinates": {
+            "longitude": 32.810492,
+            "latitude": 39.905552
+        }
+    },
+    {
+        "ids": {
+            "db": 2296001,
+            "mfb": null
+        },
+        "name": "Kiev",
+        "coordinates": {
+            "longitude": 30.512895,
+            "latitude": 50.43317
+        }
+    },
+    {
+        "ids": {
+            "db": 2200025,
+            "mfb": 9808
+        },
+        "name": "Lviv",
+        "coordinates": {
+            "longitude": 23.994196,
+            "latitude": 49.839846
+        }
+    },
+    {
+        "ids": {
+            "db": 7002774,
+            "mfb": null
+        },
+        "name": "Belfast",
+        "coordinates": {
+            "longitude": -5.889399,
+            "latitude": 54.628849
+        }
+    },
+    {
+        "ids": {
+            "db": 7000444,
+            "mfb": null
+        },
+        "name": "Cardiff",
+        "coordinates": {
+            "longitude": -3.179663,
+            "latitude": 51.475658
+        }
+    },
+    {
+        "ids": {
+            "db": 7096002,
+            "mfb": null
+        },
+        "name": "Glasgow",
+        "coordinates": {
+            "longitude": -4.243869,
+            "latitude": 55.858322
+        }
+    },
+    {
+        "ids": {
+            "db": 7096001,
+            "mfb": 3848
+        },
+        "name": "London",
+        "coordinates": {
+            "longitude": -0.113272,
+            "latitude": 51.518456
+        }
+    },
+    {
+        "ids": {
+            "db": 7001537,
+            "mfb": null
+        },
+        "name": "Manchester",
+        "coordinates": {
+            "longitude": -2.272409,
+            "latitude": 53.365083
+        }
+    }
+]

@@ -1,0 +1,46 @@
+body {
+	margin: 0; padding: 0;
+	background-color: #333;
+}
+
+.priceMarker{
+	background: #fff;
+	color: #333;
+	font-size: 1.75em;
+	padding: .25em;
+	border-radius: .25em;
+	border-top-left-radius: 0;
+	cursor: pointer;
+}
+
+.db{
+	color: #008383
+}
+.mfb{
+	color: #73d700
+}
+
+.mapboxgl-popup {
+	max-width: 30em;
+}
+.mapboxgl-popup-content {
+	background-color: #111 !important;
+	color: #ddd;
+}
+
+.mapboxgl-popup-anchor-top .mapboxgl-popup-tip {
+	border-bottom-color: #111 !important;
+}
+.mapboxgl-popup-anchor-right .mapboxgl-popup-tip {
+	border-left-color: #111 !important;
+}
+.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip {
+	border-top-color: #111 !important;
+}
+.mapboxgl-popup-anchor-left .mapboxgl-popup-tip {
+	border-right-color: #111 !important;
+}
+
+.mapboxgl-popup-close-button {
+	color: #ddd;
+}
