@@ -97,7 +97,7 @@ const addStation = (station) =>
 			const operator = findKey(res, (r) => r && r <= min(toArray(res)))
 			const e = generateMarkerElement(formatPrices(res), operator)
 			const shopLink = generateLink(operator, station)
-			e.addEventListener('click', (e) => window.location.replace(shopLink))
+			e.addEventListener('click', (e) => {window.location.href = shopLink})
 			new mapboxgl.Marker(e/*, {offset: [0, 5]}*/)
 			.setLngLat([station.coordinates.longitude, station.coordinates.latitude])
 			.addTo(map)
