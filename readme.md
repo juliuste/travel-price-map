@@ -2,7 +2,6 @@
 
 *Still in progress. [Demo](https://juliuste.github.io/travel-price-map/)*
 
-[![Build Status](https://travis-ci.org/juliuste/travel-price-map.svg?branch=master)](https://travis-ci.org/juliuste/travel-price-map)
 [![dependency status](https://img.shields.io/david/juliuste/travel-price-map.svg)](https://david-dm.org/juliuste/travel-price-map)
 [![dev dependency status](https://img.shields.io/david/dev/juliuste/travel-price-map.svg)](https://david-dm.org/juliuste/travel-price-map#info=devDependencies)
 [![license](https://img.shields.io/github/license/juliuste/travel-price-map.svg?style=flat)](LICENSE)
