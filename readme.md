@@ -9,7 +9,7 @@
 
 ## See also
 
--[travel-price-map-rest](https://github.com/juliuste/travel-price-map-rest)
+- [travel-price-map-rest](https://github.com/juliuste/travel-price-map-rest)
 
 ## Contributing
 
