@@ -30,13 +30,15 @@ const resize = () => {
 resize()
 window.addEventListener('resize', resize)
 
-const generateMarkerElement = (price, classes) => {
+const generateMarkerElement = (price, classes, shopLink) => {
 	const div = document.createElement("div")
-	div.setAttribute("class", `priceMarker ${classes}`)
-	const span = document.createElement("span")
+	div.setAttribute("class", "priceMarker")
+	const a = document.createElement("a")
+	a.setAttribute("class", `priceLink ${classes}`)
+	a.setAttribute("href", shopLink)
 	const text = document.createTextNode(price)
-	span.appendChild(text)
-	div.appendChild(span)
+	a.appendChild(text)
+	div.appendChild(a)
 	return div
 }
 
@@ -52,8 +54,7 @@ const getPriceData = (originCode) =>
 const addStation = (station) => {
 	if(toArray(station.prices).some((e) => !!e)){
 		const operator = findKey(station.prices, (r) => r && r.amount <= min(toArray(station.prices).map((x) => x ? x.amount : null)))
-		const e = generateMarkerElement(formatPrices(station.prices), operator)
-		e.addEventListener('click', (e) => {window.location.href = station.shopLink})
+		const e = generateMarkerElement(formatPrices(station.prices), operator, station.prices[operator].link)
 		new mapboxgl.Marker(e/*, {offset: [0, 5]}*/)
 		.setLngLat([station.coordinates.longitude, station.coordinates.latitude])
 		.addTo(map)

@@ -5,12 +5,17 @@ body {
 
 .priceMarker{
 	background: #fff;
-	color: #333;
 	font-size: 1.75em;
 	padding: .25em;
 	border-radius: .25em;
 	border-top-left-radius: 0;
-	cursor: pointer;
+}
+
+.priceLink{
+	color: #333;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
 }
 
 .db{
