@@ -6,7 +6,9 @@ const request = require('isomorphic-fetch')
 const toArray = require('lodash.toarray')
 const findKey = require('lodash.findkey')
 
-const origin = "DEBER"
+let origins = ["DEBER", "DEFRA"]
+
+const startOrigin = "DEBER"
 
 mapboxgl.accessToken = "pk.eyJ1IjoiZ3JlZndkYSIsImEiOiJjaXBxeDhxYm8wMDc0aTZucG94d29zdnRyIn0.oKynfvvLSuyxT3PglBMF4w"
 const map = new mapboxgl.Map({
@@ -30,15 +32,16 @@ const resize = () => {
 resize()
 window.addEventListener('resize', resize)
 
-const generateMarkerElement = (price, classes, shopLink) => {
+const generateMarkerElement = (origin, price, classes, shopLink) => {
 	const div = document.createElement("div")
-	div.setAttribute("class", "priceMarker")
+	div.setAttribute("class", origin+" priceMarker")
 	const a = document.createElement("a")
 	a.setAttribute("class", `priceLink ${classes}`)
 	a.setAttribute("href", shopLink)
 	const text = document.createTextNode(price)
 	a.appendChild(text)
 	div.appendChild(a)
+	div.hidden = true
 	return div
 }
 
@@ -51,10 +54,10 @@ const getPriceData = (originCode) =>
 	})
 	.then((res) => res.json())
 
-const addStation = (station) => {
+const addStation = (origin) => (station) => {
 	if(toArray(station.prices).some((e) => !!e)){
 		const operator = findKey(station.prices, (r) => r && r.amount <= min(toArray(station.prices).map((x) => x ? x.amount : null)))
-		const e = generateMarkerElement(formatPrices(station.prices), operator, station.prices[operator].link)
+		const e = generateMarkerElement(origin, formatPrices(station.prices), operator, station.prices[operator].link)
 		new mapboxgl.Marker(e/*, {offset: [0, 5]}*/)
 		.setLngLat([station.coordinates.longitude, station.coordinates.latitude])
 		.addTo(map)
@@ -62,10 +65,27 @@ const addStation = (station) => {
 }
 
 map.on('load', () => {
-	getPriceData(origin)
-	.then((stations) => {
-		stations.forEach(addStation)
-	})
+	const r = []
+	for(let origin of origins){
+		r.push(getPriceData(origin)
+		.then((stations) => {
+			stations.forEach(addStation(origin))
+		}))
+	}
+	Promise.all(r).then(() => select(startOrigin))
+})
+
+const select = (origin) => {
+	if(origins.indexOf(origin)>=0){
+		document.querySelectorAll('.priceMarker').forEach((el) => {
+			if(Array.from(el.classList).indexOf(origin) < 0) el.hidden = true
+			else el.hidden = false
+		})
+	}
+}
+
+document.querySelector('#cities').addEventListener('change', (e) => {
+	select(e.target.value)
 })
 
 },{"isomorphic-fetch":2,"lodash.findkey":3,"lodash.min":4,"lodash.toarray":5}],2:[function(require,module,exports){
