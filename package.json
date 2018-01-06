@@ -17,7 +17,7 @@
     "browserify": "^15.0.0"
   },
   "scripts": {
-    "build": "browserify index.js > bundle.js"
+    "build": "browserify index.js > assets/bundle.js"
   },
   "engines": {
     "node": ">=6"
