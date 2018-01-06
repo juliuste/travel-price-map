@@ -5,10 +5,10 @@ const request = require('isomorphic-fetch')
 const toArray = require('lodash.toarray')
 const findKey = require('lodash.findkey')
 
-let origins = ["DEBER", "DEFRA"]
+let origins = ["DEBER", "DEFRA", "DECGN", "DEHAM", "DELEI", "DEMUN"]
 
 const cv = document.querySelector('#cities').value
-const startOrigin = origins.indexOf(cv) >= 0 ? cv : "DEBER" 
+const startOrigin = origins.indexOf(cv) >= 0 ? cv : "DEBER"
 
 mapboxgl.accessToken = "pk.eyJ1IjoiZ3JlZndkYSIsImEiOiJjaXBxeDhxYm8wMDc0aTZucG94d29zdnRyIn0.oKynfvvLSuyxT3PglBMF4w"
 const map = new mapboxgl.Map({
