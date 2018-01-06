@@ -17,6 +17,7 @@ body {
 	position: absolute;
 	/*background: #f60;*/
 	text-align: center;
+	text-align-last: center;
 	padding: .15em;
 	padding-right: .45em;
 	top: 1rem;
