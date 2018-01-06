@@ -75,7 +75,7 @@ map.on('load', () => {
 	}
 	Promise.all(r).then(() => select(startOrigin))
 	document.querySelector('.mapboxgl-ctrl-attrib').innerHTML = '<b><a href="https://github.com/juliuste/travel-price-map">GitHub</a></b> ' + document.querySelector('.mapboxgl-ctrl-attrib').innerHTML
-	document.querySelector('.mapboxgl-ctrl-attrib').innerHTML = '<b><a href="https://juliustens.eu/impressum.html">Impressum</a></b> ' + document.querySelector('.mapboxgl-ctrl-attrib').innerHTML
+	document.querySelector('.mapboxgl-ctrl-attrib').innerHTML = '<b><a href="https://bahn.guru/impressum">Impressum</a></b> ' + document.querySelector('.mapboxgl-ctrl-attrib').innerHTML
 })
 
 const select = (origin) => {
