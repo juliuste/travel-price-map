@@ -5,6 +5,7 @@
 [![dependency status](https://img.shields.io/david/juliuste/travel-price-map.svg)](https://david-dm.org/juliuste/travel-price-map)
 [![dev dependency status](https://img.shields.io/david/dev/juliuste/travel-price-map.svg)](https://david-dm.org/juliuste/travel-price-map#info=devDependencies)
 [![license](https://img.shields.io/github/license/juliuste/travel-price-map.svg?style=flat)](LICENSE)
+[![chat on gitter](https://badges.gitter.im/juliuste.svg)](https://gitter.im/juliuste)
 
 ## See also
 
