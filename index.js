@@ -49,7 +49,7 @@ const generateMarkerElement = (origin, price, classes, shopLink) => {
 const formatPrices = (prices) => `${Math.ceil(min(toArray(prices).filter((price) => !!price).map((x) => x.amount)))}€`
 
 const getPriceData = (originCode) =>
-	request(`https://travel-price-map-rest.juliuste.de/?origin=${originCode}`, {
+	request(`https://api.pricemap.eu/?origin=${originCode}`, {
 		method: 'get'
 	})
 	.then((res) => res.json())
