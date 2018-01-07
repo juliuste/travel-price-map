@@ -10,7 +10,7 @@ let origins = ["DEBER", "DEFRA", "DECGN", "DEHAM", "DELEI", "DEMUN"]
 const cv = document.querySelector('#cities').value
 const startOrigin = origins.indexOf(cv) >= 0 ? cv : "DEBER"
 
-mapboxgl.accessToken = "pk.eyJ1IjoiZ3JlZndkYSIsImEiOiJjaXBxeDhxYm8wMDc0aTZucG94d29zdnRyIn0.oKynfvvLSuyxT3PglBMF4w"
+mapboxgl.accessToken = "pk.eyJ1IjoianVsaXVzdGUiLCJhIjoiY2o1aTBkNjZjMjM5eDMycDhsdGk4MXhveiJ9.jNUSp4gVSLau7UzFuNGAiA"
 const map = new mapboxgl.Map({
 	container: 'map',
 	style: 'mapbox://styles/mapbox/light-v9',
