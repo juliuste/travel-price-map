@@ -4,6 +4,7 @@ const min = require('lodash.min')
 const request = require('isomorphic-fetch')
 const toArray = require('lodash.toarray')
 const findKey = require('lodash.findkey')
+const alert = require('sweetalert2')
 
 let origins = ["DEBER", "DEFRA", "DECGN", "DEHAM", "DELEI", "DEMUN"]
 
@@ -38,6 +39,22 @@ const generateMarkerElement = (origin, price, classes, shopLink) => {
 	const a = document.createElement("a")
 	a.setAttribute("class", `priceLink ${classes}`)
 	a.setAttribute("href", shopLink)
+	if(classes === "mfb"){
+		a.addEventListener("click", (e) => {
+			e.preventDefault()
+			alert({
+				title: "Please note",
+				text: "Some offers by Flixbus are only available in the app. If you can't find the displayed fare on the website, please check again using the app.",
+				confirmButtonText: "Continue",
+				type: "success"
+			})
+			.catch(() => null)
+			.then(() => {
+				location.href = shopLink
+			})
+			return
+		})
+	}
 	const text = document.createTextNode(price)
 	a.appendChild(text)
 	div.appendChild(a)
