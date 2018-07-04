@@ -39,7 +39,8 @@ const generateMarkerElement = (origin, price, classes, shopLink) => {
 	const a = document.createElement("a")
 	a.setAttribute("class", `priceLink ${classes}`)
 	a.setAttribute("href", shopLink)
-	if(classes === "mfb"){
+	// warning for flix ticket prices
+	if(classes === "flix"){
 		a.addEventListener("click", (e) => {
 			e.preventDefault()
 			alert({
