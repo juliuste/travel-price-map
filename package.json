@@ -12,10 +12,10 @@
     "lodash.findkey": "^4.6.0",
     "lodash.min": "^4.0.1",
     "lodash.toarray": "^4.4.0",
-    "sweetalert2": "^7.3.4"
+    "sweetalert2": "^7.24.4"
   },
   "devDependencies": {
-    "browserify": "^15.0.0"
+    "browserify": "^16.2.2"
   },
   "scripts": {
     "build": "browserify index.js > assets/bundle.js"
