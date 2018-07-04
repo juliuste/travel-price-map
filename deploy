@@ -3,9 +3,9 @@
 rsync -rav --delete \
 	--exclude '.*' \
 	--exclude node_modules \
-	. 'enceladus:/var/www/pricemap.eu/'
+	. 'europa:/var/www/pricemap.eu/'
 
-ssh enceladus "\
+ssh europa "\
 cd /var/www/pricemap.eu
 npm i
 npm update
