@@ -21,7 +21,7 @@
     "build": "browserify index.js > assets/bundle.js"
   },
   "engines": {
-    "node": ">=6"
+    "node": ">=8"
   },
   "license": "ISC"
 }
