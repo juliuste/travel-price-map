@@ -56,6 +56,23 @@ const generateMarkerElement = (origin, price, classes, shopLink) => {
 			return
 		})
 	}
+	// warning for db ticket prices
+	if(classes === "db"){
+		a.addEventListener("click", (e) => {
+			e.preventDefault()
+			alert({
+				title: "Please note",
+				text: "Some offers by Deutsche Bahn are only available in the app. If you can't find the displayed fare on the website, please check again using the DB Navigator app.",
+				confirmButtonText: "Continue",
+				type: "success"
+			})
+			.catch(() => null)
+			.then(() => {
+				location.href = shopLink
+			})
+			return
+		})
+	}
 	const text = document.createTextNode(price)
 	a.appendChild(text)
 	div.appendChild(a)
