@@ -5,6 +5,7 @@ const request = require('isomorphic-fetch')
 const toArray = require('lodash.toarray')
 const findKey = require('lodash.findkey')
 const alert = require('sweetalert2')
+const mapboxgl = require('mapbox-gl')
 
 let origins = ["DEBER", "DEFRA", "DECGN", "DEHAM", "DELEI", "DEMUN"]
 
@@ -19,7 +20,7 @@ const map = new mapboxgl.Map({
 	hash: true,
 	center: [10.79, 50.03]
 })
-map.addControl(new mapboxgl.Navigation())
+map.addControl(new mapboxgl.NavigationControl())
 
 const el = document.getElementById('map')
 

@@ -12,6 +12,7 @@
     "lodash.findkey": "^4.6.0",
     "lodash.min": "^4.0.1",
     "lodash.toarray": "^4.4.0",
+    "mapbox-gl": "^0.46.0",
     "sweetalert2": "^7.24.4"
   },
   "devDependencies": {
