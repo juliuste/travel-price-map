@@ -18,7 +18,7 @@ const map = new mapboxgl.Map({
 	style: 'mapbox://styles/mapbox/light-v9',
 	zoom: 4.67,
 	hash: true,
-	center: [10.79, 50.03]
+	center: [14.08, 50.54]
 })
 map.addControl(new mapboxgl.NavigationControl())
 
