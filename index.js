@@ -7,7 +7,7 @@ const findKey = require('lodash.findkey')
 const alert = require('sweetalert2')
 const mapboxgl = require('mapbox-gl')
 
-let origins = ["DEBER", "DEFRA", "DECGN", "DEHAM", "DELEI", "DEMUN"]
+let origins = ["DEBER", "DEFRA", "DEHAM", "DECGN", "DEMUN", "DELEI", "PLWAR", "PLLOD", "PLGDA", "PLWRO", "PLKRA"]
 
 const cv = document.querySelector('#cities').value
 const startOrigin = origins.indexOf(cv) >= 0 ? cv : "DEBER"
