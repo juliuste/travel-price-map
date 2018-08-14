@@ -8,7 +8,7 @@ const findKey = require('lodash.findkey')
 const alert = require('sweetalert2')
 const mapboxgl = require('mapbox-gl')
 
-let origins = ["DEBER", "DEFRA", "DECGN", "DEHAM", "DELEI", "DEMUN"]
+let origins = ["DEBER", "DEFRA", "DEHAM", "DECGN", "DEMUN", "DELEI", "PLWAR", "PLLOD", "PLGDA", "PLWRO", "PLKRA"]
 
 const cv = document.querySelector('#cities').value
 const startOrigin = origins.indexOf(cv) >= 0 ? cv : "DEBER"
@@ -19,7 +19,7 @@ const map = new mapboxgl.Map({
 	style: 'mapbox://styles/mapbox/light-v9',
 	zoom: 4.67,
 	hash: true,
-	center: [10.79, 50.03]
+	center: [14.08, 50.54]
 })
 map.addControl(new mapboxgl.NavigationControl())
 
@@ -95,7 +95,10 @@ const addStation = (origin) => (station) => {
 	if(toArray(station.prices).some((e) => !!e)){
 		const operator = findKey(station.prices, (r) => r && r.amount <= min(toArray(station.prices).map((x) => x ? x.amount : null)))
 		const e = generateMarkerElement(origin, formatPrices(station.prices), operator, station.prices[operator].link)
-		new mapboxgl.Marker(e/*, {offset: [0, 5]}*/)
+		new mapboxgl.Marker({
+			element: e,
+			anchor: 'top-left'
+		})
 		.setLngLat([station.coordinates.longitude, station.coordinates.latitude])
 		.addTo(map)
 	}

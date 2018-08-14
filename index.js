@@ -94,7 +94,10 @@ const addStation = (origin) => (station) => {
 	if(toArray(station.prices).some((e) => !!e)){
 		const operator = findKey(station.prices, (r) => r && r.amount <= min(toArray(station.prices).map((x) => x ? x.amount : null)))
 		const e = generateMarkerElement(origin, formatPrices(station.prices), operator, station.prices[operator].link)
-		new mapboxgl.Marker(e/*, {offset: [0, 5]}*/)
+		new mapboxgl.Marker({
+			element: e,
+			anchor: 'top-left'
+		})
 		.setLngLat([station.coordinates.longitude, station.coordinates.latitude])
 		.addTo(map)
 	}
