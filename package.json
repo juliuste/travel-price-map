@@ -8,11 +8,11 @@
   "repository": "juliuste/travel-price-map",
   "bugs": "https://github.com/juliuste/travel-price-map/issues",
   "dependencies": {
+    "boolean": "^3.0.0",
     "isomorphic-fetch": "^2.2.1",
-    "lodash.findkey": "^4.6.0",
-    "lodash.min": "^4.0.1",
-    "lodash.toarray": "^4.4.0",
+    "lodash": "^4.17.15",
     "mapbox-gl": "^0.46.0",
+    "querystate": "^1.0.8",
     "sweetalert2": "^7.24.4"
   },
   "devDependencies": {

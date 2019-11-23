@@ -1,11 +1,14 @@
 'use strict'
 
-const min = require('lodash.min')
+const min = require('lodash/min')
 const request = require('isomorphic-fetch')
-const toArray = require('lodash.toarray')
-const findKey = require('lodash.findkey')
+const toArray = require('lodash/toArray')
+const findKey = require('lodash/findKey')
+const toPairs = require('lodash/toPairs')
 const alert = require('sweetalert2')
 const mapboxgl = require('mapbox-gl')
+const queryState = require('querystate')()
+const {boolean} = require('boolean')
 
 let origins = ["DEBER", "DEFRA", "DEHAM", "DECGN", "DEMUN", "DELEI", "PLWAR", "PLLOD", "PLGDA", "PLWRO", "PLKRA"]
 
@@ -17,7 +20,6 @@ const map = new mapboxgl.Map({
 	container: 'map',
 	style: 'mapbox://styles/mapbox/light-v9',
 	zoom: 4.67,
-	hash: true,
 	center: [14.08, 50.54]
 })
 map.addControl(new mapboxgl.NavigationControl())
@@ -81,8 +83,7 @@ const generateMarkerElement = (origin, price, classes, shopLink) => {
 	return div
 }
 
-// const formatPrices = (prices) => toArray(prices).filter((price) => !!price).map((price) => `${Math.ceil(price)}€`).join(" | ")
-const formatPrices = (prices) => `${Math.ceil(min(toArray(prices).filter((price) => !!price).map((x) => x.amount)))}€`
+const formatPrice = (amount) => `${Math.ceil(amount)}€`
 
 const getPriceData = (originCode) =>
 	request(`https://api.pricemap.eu/?origin=${originCode}`, {
@@ -90,10 +91,11 @@ const getPriceData = (originCode) =>
 	})
 	.then((res) => res.json())
 
-const addStation = (origin) => (station) => {
-	if(toArray(station.prices).some((e) => !!e)){
-		const operator = findKey(station.prices, (r) => r && r.amount <= min(toArray(station.prices).map((x) => x ? x.amount : null)))
-		const e = generateMarkerElement(origin, formatPrices(station.prices), operator, station.prices[operator].link)
+const addStation = (origin, dbOnly) => (station) => {
+	if(toPairs(station.prices).some(([operator, value]) => (!!value && (!dbOnly || operator === 'db')))) {
+		const operator = dbOnly ? 'db' : findKey(station.prices, (r) => r && r.amount <= min(toArray(station.prices).map((x) => x ? x.amount : null)))
+		const {amount, link } = station.prices[operator]
+		const e = generateMarkerElement(origin, formatPrice(amount), operator, link)
 		new mapboxgl.Marker({
 			element: e,
 			anchor: 'top-left'
@@ -104,11 +106,12 @@ const addStation = (origin) => (station) => {
 }
 
 map.on('load', () => {
+	const dbOnly = boolean(queryState.get('dbOnly'))
 	const r = []
 	for(let origin of origins){
 		r.push(getPriceData(origin)
 		.then((stations) => {
-			stations.forEach(addStation(origin))
+			stations.forEach(addStation(origin, dbOnly))
 		}))
 	}
 	Promise.all(r).then(() => select(startOrigin))
