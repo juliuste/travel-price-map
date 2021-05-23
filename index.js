@@ -6,7 +6,7 @@ const toArray = require('lodash/toArray')
 const findKey = require('lodash/findKey')
 const toPairs = require('lodash/toPairs')
 const alert = require('sweetalert2')
-const mapboxgl = require('mapbox-gl')
+const mapLibre = require('maplibre-gl')
 const queryState = require('querystate')()
 const { boolean } = require('boolean')
 
@@ -15,17 +15,22 @@ const origins = ['DEBER', 'DEFRA', 'DEHAM', 'DECGN', 'DEMUN', 'DELEI', 'PLWAR', 
 const cv = document.querySelector('#cities').value
 const startOrigin = origins.indexOf(cv) >= 0 ? cv : 'DEBER'
 
-mapboxgl.accessToken = 'pk.eyJ1IjoianVsaXVzdGUiLCJhIjoiY2o1aTBkNjZjMjM5eDMycDhsdGk4MXhveiJ9.jNUSp4gVSLau7UzFuNGAiA'
-const map = new mapboxgl.Map({
+const mapTilerKey = '0gVQZrq3O37rirjPt3wq'
+const map = new mapLibre.Map({
 	container: 'map',
-	style: 'mapbox://styles/mapbox/light-v9',
+	style: `https://api.maptiler.com/maps/pastel/style.json?key=${mapTilerKey}`,
 	zoom: 4.67,
 	center: [14.08, 50.54],
+	attributionControl: true,
+	customAttribution: [
+		'<b><a href="https://github.com/juliuste/travel-price-map">GitHub</a></b>',
+		'<b><a href="https://bahn.guru/impressum">Impressum</a></b>',
+	],
 })
-map.addControl(new mapboxgl.NavigationControl())
+map.addControl(new mapLibre.NavigationControl())
 
+// automatically resize map to always match the window's size
 const el = document.getElementById('map')
-
 const resize = () => {
 	const w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
 	const h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
@@ -46,32 +51,28 @@ const generateMarkerElement = (origin, price, classes, shopLink) => {
 	if (classes === 'flix') {
 		a.addEventListener('click', (e) => {
 			e.preventDefault()
-			alert({
+			alert.fire({
 				title: 'Please note',
 				text: "Some offers by Flixbus are only available in the app. If you can't find the displayed fare on the website, please check again using the app.",
 				confirmButtonText: 'Continue',
-				type: 'success',
+				confirmButtonColor: '#3085d6',
+				icon: 'success',
 			})
-				.catch(() => null)
-				.then(() => {
-					location.href = shopLink
-				})
+				.then(() => { window.open(shopLink, '_blank') })
 		})
 	}
 	// warning for db ticket prices
 	if (classes === 'db') {
 		a.addEventListener('click', (e) => {
 			e.preventDefault()
-			alert({
+			alert.fire({
 				title: 'Please note',
 				text: "Some offers by Deutsche Bahn are only available in the app. If you can't find the displayed fare on the website, please check again using the DB Navigator app.",
 				confirmButtonText: 'Continue',
-				type: 'success',
+				confirmButtonColor: '#3085d6',
+				icon: 'success',
 			})
-				.catch(() => null)
-				.then(() => {
-					location.href = shopLink
-				})
+				.then(() => { window.open(shopLink, '_blank') })
 		})
 	}
 	const text = document.createTextNode(price)
@@ -94,7 +95,7 @@ const addStation = (origin, dbOnly) => (station) => {
 		const operator = dbOnly ? 'db' : findKey(station.prices, (r) => r && r.amount <= min(toArray(station.prices).map((x) => x ? x.amount : null)))
 		const { amount, link } = station.prices[operator]
 		const e = generateMarkerElement(origin, formatPrice(amount), operator, link)
-		new mapboxgl.Marker({
+		new mapLibre.Marker({
 			element: e,
 			anchor: 'top-left',
 		})
@@ -113,8 +114,6 @@ map.on('load', () => {
 			}))
 	}
 	Promise.all(r).then(() => select(startOrigin))
-	document.querySelector('.mapboxgl-ctrl-attrib').innerHTML = '<b><a href="https://github.com/juliuste/travel-price-map">GitHub</a></b> ' + document.querySelector('.mapboxgl-ctrl-attrib').innerHTML
-	document.querySelector('.mapboxgl-ctrl-attrib').innerHTML = '<b><a href="https://bahn.guru/impressum">Impressum</a></b> ' + document.querySelector('.mapboxgl-ctrl-attrib').innerHTML
 })
 
 const select = (origin) => {

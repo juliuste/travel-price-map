@@ -46,28 +46,3 @@ body {
 .flix, .eurolines, .ecolines, .ouibus{
 	color: #73d700
 }
-
-.mapboxgl-popup {
-	max-width: 30em;
-}
-.mapboxgl-popup-content {
-	background-color: #111 !important;
-	color: #ddd;
-}
-
-.mapboxgl-popup-anchor-top .mapboxgl-popup-tip {
-	border-bottom-color: #111 !important;
-}
-.mapboxgl-popup-anchor-right .mapboxgl-popup-tip {
-	border-left-color: #111 !important;
-}
-.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip {
-	border-top-color: #111 !important;
-}
-.mapboxgl-popup-anchor-left .mapboxgl-popup-tip {
-	border-right-color: #111 !important;
-}
-
-.mapboxgl-popup-close-button {
-	color: #ddd;
-}
