@@ -1,0 +1,48 @@
+body {
+	margin: 0; padding: 0;
+	background-color: #333;
+	font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+#cities{
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	border: 1px dotted #666;
+	background: rgba(0, 0, 0, 0.4);
+	border-radius: .3em;
+	font-size: 1.3rem;
+	color: #fff;
+	text-overflow: '';
+	text-indent: 0.01px;
+	position: absolute;
+	/*background: #f60;*/
+	text-align: center;
+	text-align-last: center;
+	padding: .15em;
+	padding-right: .45em;
+	top: 1rem;
+	left: 1rem;
+}
+
+.priceMarker{
+	background: #fff;
+	font-size: 1.75em;
+	padding: .25em;
+	border-radius: .25em;
+	border-top-left-radius: 0;
+}
+
+.priceLink{
+	color: #333;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+}
+
+.db{
+	color: #008383
+}
+.flix, .eurolines, .ecolines, .ouibus{
+	color: #73d700
+}

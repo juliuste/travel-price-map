@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>🇪🇺 Travel price map</title>
+    <meta property="og:title" content="pricemap.eu - Railway and coach travel prices between european cities" />
+    <meta property="og:description" content="The travel price map shows you the cheapest railway and coach (bus) travel prices between european cities 🚅" />
+    <meta property="og:image" content="https://pricemap.eu/assets/screenshot.png" />
+    <meta name="twitter:card" content="summary" />
+	<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+	<link rel="stylesheet" href="assets/styles.css"/>
+	<link href='https://unpkg.com/maplibre-gl@1.14.0-rc.1/dist/maplibre-gl.css' rel='stylesheet' />
+</head>
+<body>
+	<div id="map"></div>
+	<select id="cities" size="1">
+		<option value="DEBER" selected>🇩🇪 Berlin</option>
+		<option value="DEFRA">🇩🇪 Frankfurt</option>
+		<option value="PLGDA">🇵🇱 Gdańsk</option>
+		<option value="DEHAM">🇩🇪 Hamburg</option>
+		<option value="DECGN">🇩🇪 Köln</option>
+		<option value="PLKRA">🇵🇱 Kraków</option>
+		<option value="DELEI">🇩🇪 Leipzig</option>
+		<option value="PLLOD">🇵🇱 Łódź</option>
+		<option value="DEMUN">🇩🇪 München</option>
+		<option value="PLWAR">🇵🇱 Warszawa</option>
+		<option value="PLWRO">🇵🇱 Wrocław</option>
+	</select>
+	<script type="text/javascript" src="assets/bundle.js"></script>
+</body>
+</html>
