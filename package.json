@@ -14,7 +14,7 @@
     "check-deps": "depcheck --ignore-patterns='assets/bundle.js'",
     "lint": "eslint index.js",
     "fix": "npm run lint -- --fix",
-    "test": "npm run lint && npm run check-deps",
+    "test": "npm run lint && npm run check-deps && npm run build",
     "prepublishOnly": "npm test"
   },
   "dependencies": {
