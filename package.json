@@ -1,28 +1,40 @@
 {
   "name": "travel-price-map",
-  "description": "",
   "version": "0.0.0",
+  "private": true,
+  "description": "",
   "keywords": [],
-  "author": "Julius Tens <mail@juliustens.eu>",
   "homepage": "https://github.com/juliuste/travel-price-map",
-  "repository": "juliuste/travel-price-map",
   "bugs": "https://github.com/juliuste/travel-price-map/issues",
+  "repository": "juliuste/travel-price-map",
+  "license": "ISC",
+  "author": "Julius Tens <mail@juliustens.eu>",
+  "scripts": {
+    "build": "browserify index.js > assets/bundle.js",
+    "check-deps": "depcheck --ignore-patterns='assets/bundle.js'",
+    "lint": "eslint index.js",
+    "fix": "npm run lint -- --fix",
+    "test": "npm run lint && npm run check-deps",
+    "prepublishOnly": "npm test"
+  },
   "dependencies": {
     "boolean": "^3.0.0",
-    "isomorphic-fetch": "^2.2.1",
+    "isomorphic-fetch": "^3.0.0",
     "lodash": "^4.17.15",
     "mapbox-gl": "^0.46.0",
     "querystate": "^1.0.8",
-    "sweetalert2": "^7.24.4"
+    "sweetalert2": "^11.0.11"
   },
   "devDependencies": {
-    "browserify": "^16.2.2"
-  },
-  "scripts": {
-    "build": "browserify index.js > assets/bundle.js"
+    "browserify": "^17.0.0",
+    "depcheck": "^1.4.1",
+    "eslint": "^7.27.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.23.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0"
   },
   "engines": {
-    "node": ">=8"
-  },
-  "license": "ISC"
+    "node": ">=14"
+  }
 }

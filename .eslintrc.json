@@ -1,0 +1,14 @@
+{
+	"env": {
+		"browser": true
+	},
+    "extends": "standard",
+    "rules": {
+        "comma-dangle": [
+            "error",
+            "always-multiline"
+        ],
+        "indent": ["error", "tab"],
+        "no-tabs": "off"
+    }
+}

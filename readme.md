@@ -2,10 +2,8 @@
 
 **[pricemap.eu](https://pricemap.eu/)** railway and coach (bus) travel price website. *Work in progress.*
 
-[![dependency status](https://img.shields.io/david/juliuste/travel-price-map.svg)](https://david-dm.org/juliuste/travel-price-map)
-[![dev dependency status](https://img.shields.io/david/dev/juliuste/travel-price-map.svg)](https://david-dm.org/juliuste/travel-price-map#info=devDependencies)
-[![license](https://img.shields.io/github/license/juliuste/travel-price-map.svg?style=flat)](LICENSE)
-[![chat on gitter](https://badges.gitter.im/juliuste.svg)](https://gitter.im/juliuste)
+[![License](https://img.shields.io/github/license/juliuste/travel-price-map.svg?style=flat)](license)
+[![Contact me](https://img.shields.io/badge/contact-email-turquoise)](mailto:mail@juliustens.eu)
 
 ## See also
 
@@ -14,4 +12,4 @@
 
 ## Contributing
 
-If you found a bug, want to propose a feature or feel the urge to complain about your life, feel free to visit [the issues page](https://github.com/juliuste/travel-price-map/issues).
+If you found a bug or want to propose a feature, feel free to visit [the issues page](https://github.com/juliuste/boilerplate/issues).
