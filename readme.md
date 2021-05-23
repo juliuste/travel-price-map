@@ -5,6 +5,8 @@
 [![License](https://img.shields.io/github/license/juliuste/travel-price-map.svg?style=flat)](license)
 [![Contact me](https://img.shields.io/badge/contact-email-turquoise)](mailto:mail@juliustens.eu)
 
+[![Screenshot of pricemap.eu](./assets/screenshot.png)](https://pricemap.eu)
+
 ## See also
 
 - [bahn.guru](https://github.com/juliuste/bahn.guru)
