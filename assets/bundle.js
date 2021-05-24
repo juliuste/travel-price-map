@@ -13,8 +13,9 @@ const { boolean } = require('boolean')
 
 const origins = ['DEBER', 'DEFRA', 'DEHAM', 'DECGN', 'DEMUN', 'DELEI', 'PLWAR', 'PLLOD', 'PLGDA', 'PLWRO', 'PLKRA']
 
-const cv = document.querySelector('#cities').value
-const startOrigin = origins.indexOf(cv) >= 0 ? cv : 'DEBER'
+const startOrigin = (queryState.get('origin') && origins.includes(queryState.get('origin'))) ? queryState.get('origin') : 'DEBER'
+queryState.set('origin', startOrigin)
+document.addEventListener('DOMContentLoaded', () => { document.querySelector('#cities').value = startOrigin })
 
 const mapTilerKey = '0gVQZrq3O37rirjPt3wq'
 const map = new mapLibre.Map({
@@ -127,7 +128,9 @@ const select = (origin) => {
 }
 
 document.querySelector('#cities').addEventListener('change', (e) => {
-	select(e.target.value)
+	const city = e.target.value
+	queryState.set('origin', city)
+	select(city)
 })
 
 },{"boolean":2,"isomorphic-fetch":3,"lodash/findKey":115,"lodash/min":132,"lodash/toArray":136,"lodash/toPairs":137,"maplibre-gl":140,"querystate":141,"sweetalert2":148}],2:[function(require,module,exports){
